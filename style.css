@@ -20,9 +20,41 @@ header, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-area: header;
   background-color: var(--background-color);
   color: var(--text-color);
   border-bottom: 1px solid var(--border-color);
+  padding: var(--padding);
+}
+
+.grid {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  --border-color: #e5e7eb;
+  --background-color: #fff;
+  --text-color: #030712;
+  --padding: 2rem 3rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  grid-area: footer;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
   padding: var(--padding);
 }
 
