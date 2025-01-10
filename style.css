@@ -7,10 +7,133 @@ body {
 }
 
 header, footer {
-  background-color: #333;
   color: white;
   text-align: center;
-  padding: 1em 0;
+}
+
+.header {
+  --border-color: #e5e7eb;
+  --background-color: #fff;
+  --text-color: #030712;
+  --padding: .5rem 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--padding);
+}
+
+.header__brand {
+  --font-size: 0.5rem;
+  font-size: var(--font-size);
+}
+
+.header__nav__list {
+  --gap: 1rem;
+
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+
+.header__nav__list-item {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__toggle {
+  --background-color: #fff;
+  --border-color: #e5e7eb;
+  --border-radius: 5px;
+  --padding: .75rem 1rem;
+  --font-size: 1rem;
+  --gap: .75rem;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: var(--gap);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  font-size: var(--font-size);
+}
+
+.dropdown__menu {
+  --background-color: #fff;
+  --border-radius: 5px;
+  --border-color: #e5e7eb;
+  --padding: .5rem;
+
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 2px;
+  min-width: 100px;
+  width: 100%;
+  right: 0;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  border: 1px solid var(--border-color);
+}
+
+.dropdown-indicator {
+  --text-color: #94a3b8;
+  color: var(--text-color);
+}
+
+.dropdown-icon {
+  --text-color: #16a34a;
+  color: var(--text-color);
+}
+
+.dropdown--active .dropdown__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown__menu__list {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown__menu__list-item {
+  display: flex;
+}
+
+.dropdown__menu-link {
+  --padding: .5rem .75rem;
+
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--padding);
+  text-decoration: none;
+}
+
+.dropdown__menu-link:hover {
+  --background-color: #f9fafb;
+
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 main {

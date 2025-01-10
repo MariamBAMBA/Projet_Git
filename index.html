@@ -7,12 +7,85 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <!-- Navigation sera ajoutée ici -->
+    <header class="header">
+      <div class="header__brand">
+        <h1>Projet Collaboration Avancé</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__list-item">
+            <a class="header__nav-link" href="#">Accueil</a>
+          </li>
+
+          <li class="header__nav__list-item">
+            <a class="header__nav-link" href="#">À propos</a>
+          </li>
+
+          <li class="header__nav__list-item">
+            <a class="header__nav-link" href="#">Contact</a>
+          </li>
+
+          <li class="header__nav__list-item">
+            <div class="header__dropdown dropdown">
+              <button class="header__dropdown-toggle dropdown__toggle" type="button">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                  class="dropdown-icon"
+                >
+                  <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+                  <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+                  <line x1="6" x2="6.01" y1="6" y2="6"/>
+                  <line x1="6" x2="6.01" y1="18" y2="18"/>
+                </svg>
+
+                <span>Nos Services</span>
+
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                  class="dropdown-indicator"
+                >
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              </button>
+
+              <div class="header__dropdown__menu dropdown__menu">
+                <ul class="dropdown__menu__list">
+                  <li class="dropdown__menu__list-item">
+                    <a class="dropdown__menu-link" href="#">Service 1</a>
+                  </li>
+
+                  <li class="dropdown__menu__list-item">
+                    <a class="dropdown__menu-link" href="#">Service 2</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </nav>
     </header>
+
     <main>
       <p>Bienvenue sur notre projet collaboratif avancé.</p>
     </main>
+
     <footer>
       <!-- Footer sera ajouté ici -->
     </footer>
